@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import React from 'react';
 
-function RandomPlayer() {
+function RandomPlayer() { //This is the state to check if the block is being hovered
   const [isHovered, setIsHovered] = useState(false);
 
-  const player = {
+  const player = { //Player information that will show when the block is Hovered
     name: 'Santiago Gimenez',
     position: 'Striker',
     nationality: 'Mexican',
@@ -13,16 +13,16 @@ function RandomPlayer() {
     assists: 2,
   };
 
-  const handleMouseOver = () => {
+  const handleMouseOver = () => { //Function to set the hover to true
     setIsHovered(true);
   };
 
-  const handleMouseOut = () => {
+  const handleMouseOut = () => { //Function to set the hover to false
     setIsHovered(false);
   };
 
-  return (
-    <div>
+  return ( //Styling for each state followed by the players information that will be displayed when hovered and the message that will be displayed when not hovered
+    <div> 
       <div 
         onMouseOver={handleMouseOver} 
         onMouseOut={handleMouseOut}
